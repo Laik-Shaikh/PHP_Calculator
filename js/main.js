@@ -16,7 +16,7 @@ keys.forEach(key => {
         // if(key.getAttribute)
         const classList = [ ...key.classList ];
 
-        if((result.textContent === "invalid syntax" || result.textContent === "Cannot divided by zero")&& classList.includes('pow')) {
+        if((result.textContent === "invalid syntax" || result.textContent === "Cannot be divided by 0")&& classList.includes('pow')) {
             result.textContent = "0";
             expression.value = "";
             return ;
@@ -30,7 +30,7 @@ keys.forEach(key => {
         if(classList.includes('DEL')) {
             if(result.textContent === "0") return ;
 
-            if(result.textContent === "invalid syntax") {
+            if(result.textContent === "invalid syntax" || result.textContent === "Cannot be divided by 0") {
                 clearResults();
                 return ;
             }
@@ -53,7 +53,7 @@ keys.forEach(key => {
                 return ;
             }
 
-            if(result.textContent === "invalid syntax") {
+            if(result.textContent === "invalid syntax" || result.textContent === "Cannot be divided by 0") {
                 result.textContent = e.target.value;
                 expression.value = e.target.value;
             }
