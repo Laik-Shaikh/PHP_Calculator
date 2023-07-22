@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.header {
+    max-height: 10vh;
+    height: 10vh;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 3rem;
+}
+
+.header p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 43px;
+    color: #FFEAD2; 
+}
+
+.header > h1 {
+    
+    color: white;
+}
+
+.header .logout {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 0.7rem;
+}
+
+
+.header .logout i{
+    color: #FFEAD2;
+}
+
+.header .logout p {
+    color: #FFEAD2;   
+}
+
+.container {
+    width: 100%;
+    height: calc(100vh - 10vh);
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    border: 1px solid;
+    margin-top: 2rem;
+    height: 450px;
+    width: 70vw;
+
+}
+
+.display {
+    height: 15%;
+    background-color: rgb(233, 179, 114);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+
+}
+
+.display .result {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+
+.keys {
+   
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 1rem;
+    padding: 3rem 0.5rem 0rem 0.5rem;
+    background-color: #FFD9C0;
+    height: 85%
+}
+
+.rows {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 10px;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+}
+
+.key {
+    background-color: #FFEAD2;
+    /* border: 1px solid #000000; */
+    border: none;
+    outline: none;
+    padding: .5rem 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #BA704F;
+    font-weight: 500;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.key:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+}
+
+
+.submit {
+    border: none;
+    outline: none;
+    background: transparent;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* Register */
+
+.register-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #94ADD7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #FFF4F4;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card-content {
+    padding: 2rem;
+}
+
+.card-content .title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 43px;
+    margin-bottom: 1rem;
+    color: #393646;
+    text-align: center;
+}
+
+
+
+.form-container .input-container {
+    width: 100%;
+    padding-top: 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #9DB2BF;
+    opacity: 0.7;
+    display: flex;
+    column-gap: 1.8rem;
+    align-items: center;
+}
+
+.form-container .input-container span {
+    display: block;
+}
+
+.form-container .input-container span i {
+    font-size: larger;
+    margin-left: 14px;
+}
+
+.form-container .input-container input {
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: #212A3E;
+}
+
+.form-container .input-container .error-field {
+    color: #FF0060;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+::placeholder {
+    color: #404258;
+    font-size: 1rem;
+}
+
+.form-container .submit-btn {
+    padding-top: 1.5rem;
+    width: 100%;
+}
+
+.form-container .submit-btn input {
+    background-color: #75C2F6;
+    text-align: center;
+    border: 1px solid #404258;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 43px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 16px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.form-container .submit-btn input:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.fail-error {
+    color: #FF0060 !important;
+    font-style: italic;
+    margin-top: 12px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.success {
+    background-color: lightgreen;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 43px;
+    padding: 5px 10px;
+    margin-bottom: 0.5rem;
+}
+
+.nav-login-register{
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 43px;
+}
+
+.nav-login-register p a {
+    text-decoration: none;
+    color: blue;
+}
+
+.nav-login-register p a:visited {
+    color: blue;
+}
