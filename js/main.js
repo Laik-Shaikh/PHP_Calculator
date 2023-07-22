@@ -16,7 +16,7 @@ keys.forEach(key => {
         // if(key.getAttribute)
         const classList = [ ...key.classList ];
 
-        if(result.textContent === "invalid syntax" && classList.includes('pow')) {
+        if((result.textContent === "invalid syntax" || result.textContent === "Cannot divided by zero")&& classList.includes('pow')) {
             result.textContent = "0";
             expression.value = "";
             return ;
