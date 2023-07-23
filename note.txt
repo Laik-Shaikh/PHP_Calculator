@@ -1,0 +1,3 @@
+create a new MYSQL Database named `calculator_user`.
+and a table name is `users`.
+`users`table should have column name are id, username, email, password.
